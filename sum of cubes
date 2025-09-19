@@ -1,0 +1,17 @@
+def sum_of_cubes(m, n):
+    if m > n:
+        return 0  
+    
+    total = 0
+    for i in range(m, n + 1):
+        total += i ** 3
+    return total
+m = int(input("Enter m: "))
+n = int(input("Enter n: "))
+
+result = sum_of_cubes(m, n)
+
+if result == 0 and m > n:
+    print("Invalid range! m should be less than or equal to n.")
+else:
+    print(f"Sum of cubes from {m} to {n} = {result}")
