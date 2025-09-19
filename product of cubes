@@ -1,0 +1,17 @@
+def product_of_numbers(m, n):
+    if m > n:
+        return 0  
+    
+    product = 1
+    for i in range(m, n + 1):
+        product *= i
+    return product
+m = int(input("Enter m: "))
+n = int(input("Enter n: "))
+
+result = product_of_numbers(m, n)
+
+if result == 0 and m > n:
+    print("Invalid range! m should be less than or equal to n.")
+else:
+    print(f"Product of numbers from {m} to {n} = {result}")
